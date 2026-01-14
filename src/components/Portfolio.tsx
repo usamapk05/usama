@@ -19,6 +19,7 @@ const projects = [
     description: 'Interactive sales analytics dashboard with real-time KPIs, trend analysis, and regional performance metrics.',
     technologies: ['Power BI', 'DAX', 'SQL', 'Data Modeling'],
     details: 'Developed a comprehensive sales performance tracking system that monitors key metrics including revenue, growth rates, regional comparisons, and product performance. Features include drill-through capabilities, dynamic filtering, and automated data refresh.',
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiNGE1YjE5MzgtMGU3MS00NmI1LWEyN2EtOThmYjU1ZGViYTI3IiwidCI6IjU4M2U4ODhiLTAwOGYtNGExMi05MjliLWVkYzk0ZWQxZmI4ZCIsImMiOjl9',
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const projects = [
     description: 'Enterprise asset management implementation with custom workflows and maintenance optimization.',
     technologies: ['IBM Maximo', 'Asset Management', 'Workflow Automation'],
     details: 'Led the functional implementation of IBM Maximo for enterprise asset management, including configuration of work orders, preventive maintenance schedules, and inventory management modules.',
+    link: null,
   },
 ];
 
@@ -122,7 +124,7 @@ const Portfolio = () => {
             </p>
             
             <h4 className="font-semibold mb-3">Technologies Used</h4>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 mb-6">
               {selectedProject?.technologies.map((tech) => (
                 <span
                   key={tech}
@@ -132,6 +134,15 @@ const Portfolio = () => {
                 </span>
               ))}
             </div>
+
+            {selectedProject?.link && (
+              <Button asChild className="w-full">
+                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Project
+                </a>
+              </Button>
+            )}
           </div>
         </DialogContent>
       </Dialog>
