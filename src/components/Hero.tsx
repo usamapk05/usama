@@ -3,7 +3,6 @@ import { ArrowDown, Linkedin, Mail, Award, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import profileImage from '@/assets/profile.jpeg';
-
 const roles = ['Power BI Certified Consultant', 'Business Analytics Developer', 'IBM Maximo Functional Associate'];
 const Hero = () => {
   const typedText = useTypingEffect(roles, 100, 50, 2000);
@@ -30,11 +29,7 @@ const Hero = () => {
         }} className="order-1 lg:order-2">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-pulse-glow">
-                <img 
-                  src={profileImage} 
-                  alt="Usama Mehmood" 
-                  className="w-full h-full rounded-full object-cover"
-                />
+                <img src={profileImage} alt="Usama Mehmood" className="w-full h-full rounded-full object-cover" />
               </div>
               {/* PL-300 Badge */}
               <motion.div initial={{
@@ -77,7 +72,7 @@ const Hero = () => {
                 <Award className="w-5 h-5 text-accent" />
                 <span className="text-muted-foreground">Microsoft Certified: Power BI Data Analyst (PL-300)</span>
               </div>
-              <p className="text-muted-foreground mb-8 text-lg">Transforming complex data into actionable insights. 2+ years of experience in Power BI development, data analytics, and IBM Maximo Functional solutions.</p>
+              <p className="text-muted-foreground mb-8 text-lg">Delivering data-driven insights by building scalable Power BI dashboards and analytics solutions, with 2+ years of experience across business intelligence and IBM Maximo Functional implementations.</p>
             </motion.div>
 
             <motion.div initial={{

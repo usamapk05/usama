@@ -116,7 +116,9 @@ const About = () => {
           duration: 0.6,
           delay: 0.2
         }}>
-            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">With over 2 years of experience in business analytics and IBM Maximo Functional , I specialize in creating powerful data visualizations and solutions using Power BI and IBM Maximo Functional support. My passion lies in uncovering insights that drive business decisions and optimize operations.</p>
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">Business Analytics Developer with 2+ years of hands-on experience in business intelligence and IBM Maximo Functional solutions. My expertise includes asset management, preventive maintenance, inventory, and work order management. I design impactful Power BI dashboards and analytics solutions that enhance operational performance. Skilled across the full analytics lifecycle, from data modeling and ETL to building clear, insight-driven visualizations that support strategic decision-making.
+
+          </p>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
