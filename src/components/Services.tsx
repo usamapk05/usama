@@ -33,8 +33,8 @@ const services = [
   },
   {
     icon: Settings,
-    title: 'IBM Maximo Support',
-    description: 'Functional support and implementation of IBM Maximo for enterprise asset management solutions.',
+    title: 'IBM Maximo Functional Support',
+    description: 'Asset Management, Preventive Maintenance, Work Orders, and Inventory module implementation & support.',
   },
   {
     icon: FileSpreadsheet,
