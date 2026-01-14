@@ -64,7 +64,7 @@ const Hero = () => {
               </h1>
               <div className="h-12 md:h-16 mb-6">
                 <span className="text-xl md:text-3xl text-muted-foreground">
-                  {typedText}
+                  <span key={typedText}>{typedText}</span>
                   <span className="animate-blink text-accent">|</span>
                 </span>
               </div>
