@@ -122,7 +122,8 @@ const Certifications = () => {
       }} transition={{
         duration: 0.6
       }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">TRAININGS & CERTIFICATIONS  <span className="text-accent">Certifications</span> & Credentials
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            TRAININGS & <span className="text-accent">CERTIFICATIONS</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Professional certifications validating my expertise in data analytics and technology

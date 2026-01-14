@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16">
           {/* Profile Image */}
           <motion.div initial={{
           opacity: 0,
@@ -26,7 +26,7 @@ const Hero = () => {
           scale: 1
         }} transition={{
           duration: 0.8
-        }} className="order-1 lg:order-2">
+        }} className="order-1 lg:order-2 flex-shrink-0">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-pulse-glow">
                 <img src={profileImage} alt="Usama Mehmood" className="w-full h-full rounded-full object-cover" />
