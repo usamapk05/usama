@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Linkedin, Mail, Award } from 'lucide-react';
+import { ArrowDown, Linkedin, Mail, Award, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
-const roles = ['Business Analyst', 'Power BI Developer', 'Data Analytics Expert', 'IBM Maximo Specialist'];
+import profileImage from '@/assets/profile.jpeg';
+
+const roles = ['Power BI Certified Consultant', 'Business Analytics Developer', 'IBM Maximo Functional Associate'];
 const Hero = () => {
   const typedText = useTypingEffect(roles, 100, 50, 2000);
   return <section id="home" className="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden pt-20">
@@ -28,9 +30,11 @@ const Hero = () => {
         }} className="order-1 lg:order-2">
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-accent to-primary p-1 animate-pulse-glow">
-                <div className="w-full h-full rounded-full bg-card flex items-center justify-center text-6xl md:text-7xl font-bold text-accent">
-                  UM
-                </div>
+                <img 
+                  src={profileImage} 
+                  alt="Usama Mehmood" 
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               {/* PL-300 Badge */}
               <motion.div initial={{
@@ -92,6 +96,12 @@ const Hero = () => {
               <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
                 <a href="#contact">Contact Me</a>
               </Button>
+              <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
+                <a href="/Usama-resume.pdf" download="Usama resume.pdf">
+                  <Download className="w-4 h-4 mr-2" />
+                  Resume
+                </a>
+              </Button>
             </motion.div>
 
             <motion.div initial={{
@@ -104,10 +114,10 @@ const Hero = () => {
             delay: 0.5,
             duration: 0.6
           }} className="flex items-center justify-center lg:justify-start gap-4">
-              <a href="https://linkedin.com/in/usama-mehmood" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300">
+              <a href="https://www.linkedin.com/in/usama-mehmood-33504b365" target="_blank" rel="noopener noreferrer" className="p-3 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="mailto:usama@example.com" className="p-3 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300">
+              <a href="mailto:mehmoodusama745@gmail.com" className="p-3 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300">
                 <Mail className="w-5 h-5" />
               </a>
             </motion.div>

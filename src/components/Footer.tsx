@@ -18,7 +18,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com/in/usama-mehmood"
+              href="https://www.linkedin.com/in/usama-mehmood-33504b365"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300"
@@ -26,7 +26,7 @@ const Footer = () => {
               <Linkedin className="w-4 h-4" />
             </a>
             <a
-              href="mailto:usama@example.com"
+              href="mailto:mehmoodusama745@gmail.com"
               className="p-2 rounded-full bg-secondary hover:bg-accent/20 transition-colors duration-300"
             >
               <Mail className="w-4 h-4" />

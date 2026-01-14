@@ -11,20 +11,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'usama@example.com',
-    href: 'mailto:usama@example.com',
+    value: 'mehmoodusama745@gmail.com',
+    href: 'mailto:mehmoodusama745@gmail.com',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+92 XXX XXX XXXX',
-    href: 'tel:+92XXXXXXXXXX',
+    value: '+92 340 6252128',
+    href: 'tel:+923406252128',
   },
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'linkedin.com/in/usama-mehmood',
-    href: 'https://linkedin.com/in/usama-mehmood',
+    value: 'linkedin.com/in/usama-mehmood-33504b365',
+    href: 'https://www.linkedin.com/in/usama-mehmood-33504b365',
   },
   {
     icon: MapPin,
