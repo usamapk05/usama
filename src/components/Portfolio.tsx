@@ -10,12 +10,18 @@ import {
   DialogDescription,
 } from '@/components/ui/dialog';
 
+// Import project images
+import salesAnalyticsImg from '@/assets/sales-analytics-dashboard.png';
+import creditCardImg from '@/assets/credit-card-analysis.png';
+import salesPerformanceImg from '@/assets/sales-performance-dashboard.png';
+
 const projects = [
   {
     id: 1,
     title: 'Sales Analytics Report (Interactive Dashboard)',
     category: 'Power BI',
     icon: BarChart3,
+    image: salesAnalyticsImg,
     description: 'Built an interactive Power BI dashboard to analyze sales, profit, COGS, and units across products, countries, and segments. Enabled dynamic insights using DAX measures, slicers, and custom tooltips to support data-driven business decisions.',
     technologies: ['Power BI Desktop & Service', 'DAX measures (Sales, Profit, COGS, Units)', 'Data Modeling (Star Schema)', 'Interactive Tooltips', 'Slicers & Filters'],
     details: `**Business Objective**
@@ -61,6 +67,7 @@ Custom tooltips provide deeper insights on: Net Sales, Cost of Goods Sold (COGS)
     title: 'Credit Card Transaction Analysis Report',
     category: 'Power BI',
     icon: BarChart3,
+    image: creditCardImg,
     description: 'An interactive Power BI analytics report designed to analyze key business data and present meaningful insights through structured visuals and KPIs. The report enables users to explore performance metrics, identify trends, and support data-driven decision-making.',
     technologies: ['Microsoft Power BI Desktop', 'DAX measures and calculations', 'Data Modeling', 'Interactive visuals, slicers, and filters'],
     details: `**Objective**
@@ -96,6 +103,7 @@ The goal of this project was to:
     title: 'Sales Performance Dashboard',
     category: 'Power BI',
     icon: BarChart3,
+    image: salesPerformanceImg,
     description: 'This project is an interactive Power BI sales analytics report designed to analyze sales performance and provide meaningful business insights. The report helps users understand overall performance, identify trends, and compare results across different dimensions through intuitive and interactive visuals.',
     technologies: ['Microsoft Power BI Desktop', 'DAX for calculated measures and KPIs', 'Data Modeling', 'Interactive visuals, slicers, and filters'],
     details: `**Objective**
@@ -141,6 +149,7 @@ Filters and slicers allow users to dynamically explore data and focus on specifi
     title: 'IBM Maximo Implementation',
     category: 'IBM Maximo',
     icon: Settings,
+    image: null,
     description: 'Enterprise asset management implementation with custom workflows and maintenance optimization.',
     technologies: ['IBM Maximo', 'Asset Management', 'Workflow Automation'],
     details: 'Led the functional implementation of IBM Maximo for enterprise asset management, including configuration of work orders, preventive maintenance schedules, and inventory management modules.',
@@ -162,9 +171,17 @@ const ProjectCard = ({ project, onClick }: { project: typeof projects[0]; onClic
       onClick={onClick}
       className="group glass-effect rounded-xl overflow-hidden cursor-pointer hover-lift"
     >
-      {/* Placeholder Image */}
+      {/* Project Image */}
       <div className="aspect-video bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center relative overflow-hidden">
-        <Icon className="w-16 h-16 text-accent/50 group-hover:scale-110 transition-transform duration-300" />
+        {project.image ? (
+          <img 
+            src={project.image} 
+            alt={project.title} 
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        ) : (
+          <Icon className="w-16 h-16 text-accent/50 group-hover:scale-110 transition-transform duration-300" />
+        )}
         <div className="absolute inset-0 bg-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       
