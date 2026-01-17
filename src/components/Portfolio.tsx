@@ -93,6 +93,51 @@ The goal of this project was to:
   },
   {
     id: 3,
+    title: 'Sales Performance Dashboard',
+    category: 'Power BI',
+    icon: BarChart3,
+    description: 'This project is an interactive Power BI sales analytics report designed to analyze sales performance and provide meaningful business insights. The report helps users understand overall performance, identify trends, and compare results across different dimensions through intuitive and interactive visuals.',
+    technologies: ['Microsoft Power BI Desktop', 'DAX for calculated measures and KPIs', 'Data Modeling', 'Interactive visuals, slicers, and filters'],
+    details: `**Objective**
+
+The objective of this project was to:
+• Analyze sales performance using key metrics
+• Identify trends and patterns in the data
+• Enable comparative analysis across categories, regions, or time
+• Demonstrate practical skills in Power BI reporting and data visualization
+
+**Key Insights Delivered**
+
+Overall Sales Performance
+The report provides a clear overview of total sales and related KPIs, allowing users to quickly assess overall business performance.
+
+Trend Analysis
+Time-based visuals highlight sales trends, helping identify periods of growth, decline, or consistency.
+
+Category / Segment Comparison
+Comparative visuals show how different categories, segments, or regions contribute to total sales, making it easier to identify top and low performers.
+
+Performance Distribution
+The report visualizes how sales are distributed across different dimensions, supporting deeper understanding of contribution patterns.
+
+Interactive Exploration
+Filters and slicers allow users to dynamically explore data and focus on specific areas of interest for deeper analysis.
+
+**Business Value**
+• Supports data-driven decision-making
+• Improves visibility into sales trends and performance
+• Reduces reliance on static reports through self-service analytics
+• Helps stakeholders quickly identify key insights and patterns
+
+**Skills Demonstrated**
+• Power BI report development
+• Business-focused data visualization
+• Data modeling and DAX fundamentals
+• Analytical thinking and insight generation`,
+    link: 'https://app.powerbi.com/view?r=eyJrIjoiZjg2ZDg5OWMtNTNlMS00NTUxLTllN2UtYjhhN2EyM2QxMjI0IiwidCI6IjU4M2U4ODhiLTAwOGYtNGExMi05MjliLWVkYzk0ZWQxZmI4ZCIsImMiOjl9',
+  },
+  {
+    id: 4,
     title: 'IBM Maximo Implementation',
     category: 'IBM Maximo',
     icon: Settings,
@@ -187,7 +232,7 @@ const Portfolio = () => {
             </DialogDescription>
           </DialogHeader>
           
-          <div className="flex-1 overflow-y-auto pr-2 mt-4 space-y-6">
+          <div className="flex-1 overflow-y-auto pr-3 mt-4 space-y-6 scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-transparent hover:scrollbar-thumb-accent/50">
             {/* Technologies Used */}
             <div>
               <h4 className="font-semibold mb-3 text-foreground">Tools & Technologies</h4>
