@@ -174,46 +174,79 @@ const Portfolio = () => {
 
       {/* Project Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="max-w-2xl">
-          <DialogHeader>
+        <DialogContent className="max-w-3xl max-h-[90vh] flex flex-col">
+          <DialogHeader className="flex-shrink-0">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-medium text-accent bg-accent/10 px-3 py-1 rounded-full">
                 {selectedProject?.category}
               </span>
             </div>
-            <DialogTitle className="text-2xl">{selectedProject?.title}</DialogTitle>
-            <DialogDescription className="text-base">
+            <DialogTitle className="text-xl md:text-2xl">{selectedProject?.title}</DialogTitle>
+            <DialogDescription className="text-sm md:text-base">
               {selectedProject?.description}
             </DialogDescription>
           </DialogHeader>
           
-          <div className="mt-4">
-            <h4 className="font-semibold mb-2">Project Details</h4>
-            <p className="text-muted-foreground text-sm leading-relaxed mb-6">
-              {selectedProject?.details}
-            </p>
-            
-            <h4 className="font-semibold mb-3">Technologies Used</h4>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {selectedProject?.technologies.map((tech) => (
-                <span
-                  key={tech}
-                  className="text-xs bg-secondary px-3 py-1 rounded-full"
-                >
-                  {tech}
-                </span>
-              ))}
+          <div className="flex-1 overflow-y-auto pr-2 mt-4 space-y-6">
+            {/* Technologies Used */}
+            <div>
+              <h4 className="font-semibold mb-3 text-foreground">Tools & Technologies</h4>
+              <div className="flex flex-wrap gap-2">
+                {selectedProject?.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-xs bg-accent/10 text-accent px-3 py-1.5 rounded-full font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            {selectedProject?.link && (
+            {/* Project Details */}
+            <div>
+              <h4 className="font-semibold mb-3 text-foreground">Project Details</h4>
+              <div className="text-muted-foreground text-sm leading-relaxed space-y-4">
+                {selectedProject?.details.split('\n\n').map((section, index) => {
+                  const lines = section.split('\n');
+                  const isHeading = lines[0]?.startsWith('**') && lines[0]?.endsWith('**');
+                  
+                  if (isHeading) {
+                    const headingText = lines[0].replace(/\*\*/g, '');
+                    const contentLines = lines.slice(1);
+                    return (
+                      <div key={index} className="space-y-2">
+                        <h5 className="font-semibold text-foreground text-sm">{headingText}</h5>
+                        {contentLines.map((line, lineIndex) => (
+                          <p key={lineIndex} className="pl-0">{line}</p>
+                        ))}
+                      </div>
+                    );
+                  }
+                  
+                  return (
+                    <div key={index} className="space-y-1">
+                      {lines.map((line, lineIndex) => (
+                        <p key={lineIndex}>{line}</p>
+                      ))}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Fixed Button at Bottom */}
+          {selectedProject?.link && (
+            <div className="flex-shrink-0 pt-4 border-t border-border mt-4">
               <Button asChild className="w-full">
                 <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="w-4 h-4 mr-2" />
                   View Project
                 </a>
               </Button>
-            )}
-          </div>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
     </section>
