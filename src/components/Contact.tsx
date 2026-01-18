@@ -64,12 +64,20 @@ const Contact = () => {
         email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        // Alternative names
+
+        // Alternative names (depends on how your EmailJS template is configured)
         from_name: formData.name,
         from_email: formData.email,
-        user_name: formData.name,
-        user_email: formData.email,
         reply_to: formData.email,
+
+        // Subject alternatives
+        from_subject: formData.subject,
+        user_subject: formData.subject,
+        message_subject: formData.subject,
+        email_subject: formData.subject,
+        title: formData.subject,
+
+        // Optional recipient display name
         to_name: 'Usama',
       };
 
