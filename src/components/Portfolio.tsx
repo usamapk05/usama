@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { ExternalLink, X, BarChart3, Settings } from 'lucide-react';
+import { ExternalLink, X, BarChart3 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -143,17 +143,6 @@ Filters and slicers allow users to dynamically explore data and focus on specifi
 • Data modeling and DAX fundamentals
 • Analytical thinking and insight generation`,
     link: 'https://app.powerbi.com/view?r=eyJrIjoiZjg2ZDg5OWMtNTNlMS00NTUxLTllN2UtYjhhN2EyM2QxMjI0IiwidCI6IjU4M2U4ODhiLTAwOGYtNGExMi05MjliLWVkYzk0ZWQxZmI4ZCIsImMiOjl9',
-  },
-  {
-    id: 4,
-    title: 'IBM Maximo Implementation',
-    category: 'IBM Maximo',
-    icon: Settings,
-    image: null,
-    description: 'Enterprise asset management implementation with custom workflows and maintenance optimization.',
-    technologies: ['IBM Maximo', 'Asset Management', 'Workflow Automation'],
-    details: 'Led the functional implementation of IBM Maximo for enterprise asset management, including configuration of work orders, preventive maintenance schedules, and inventory management modules.',
-    link: null,
   },
 ];
 
