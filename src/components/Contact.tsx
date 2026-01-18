@@ -6,6 +6,12 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_uzd4u0p';
+const EMAILJS_TEMPLATE_ID = 'template_uxdsn4m';
+const EMAILJS_PUBLIC_KEY = '1ooovBqueNeis7Czs';
 
 const contactInfo = [
   {
@@ -51,17 +57,38 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
-    // TODO: Replace with actual Supabase Edge Function call
-    // For now, simulate a successful submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_name: 'Usama',
+      };
 
-    toast({
-      title: 'Message Sent!',
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
 
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsLoading(false);
+      toast({
+        title: 'Message Sent!',
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again or contact directly via email.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
