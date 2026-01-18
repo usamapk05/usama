@@ -59,10 +59,17 @@ const Contact = () => {
 
     try {
       const templateParams = {
-        from_name: formData.name,
-        from_email: formData.email,
+        // Common variable names used in EmailJS templates
+        name: formData.name,
+        email: formData.email,
         subject: formData.subject,
         message: formData.message,
+        // Alternative names
+        from_name: formData.name,
+        from_email: formData.email,
+        user_name: formData.name,
+        user_email: formData.email,
+        reply_to: formData.email,
         to_name: 'Usama',
       };
 
