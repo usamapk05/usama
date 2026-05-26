@@ -15,14 +15,17 @@ const skills = [{
   name: 'SQL / T-SQL',
   level: 85
 }, {
-  name: 'AWS Cloud Data Analytics',
+  name: 'Microsoft Fabric Ecosystem',
   level: 80
 }, {
   name: 'IBM Maximo',
-  level: 85
+  level: 80
+}, {
+  name: 'AWS Cloud Data Analytics',
+  level: 70
 }, {
   name: 'Python & PySpark',
-  level: 75
+  level: 60
 }];
 const languages = [{
   name: 'Arabic',
