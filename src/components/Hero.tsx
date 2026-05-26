@@ -68,9 +68,19 @@ const Hero = () => {
                   <span className="animate-blink text-accent">|</span>
                 </span>
               </div>
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-6 text-sm">
-                <Award className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">Microsoft Certified: Power BI Data Analyst (PL-300)</span>
+              <div className="flex flex-col items-center lg:items-start gap-2 mb-6 text-sm">
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-muted-foreground">Microsoft Certified: Power BI Data Analyst (PL-300)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-muted-foreground">Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Award className="w-5 h-5 text-accent flex-shrink-0" />
+                  <span className="text-muted-foreground">Microsoft Certified: Fabric Data Engineer Associate (DP-700)</span>
+                </div>
               </div>
               <p className="text-muted-foreground mb-8 text-lg">Delivering data-driven insights by building scalable Power BI dashboards and analytics solutions, with 2+ years of experience across business intelligence and IBM Maximo Functional implementations.</p>
             </motion.div>
