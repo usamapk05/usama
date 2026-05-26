@@ -6,23 +6,23 @@ const skills = [{
   name: 'Power BI',
   level: 95
 }, {
-  name: 'DAX',
+  name: 'DAX & Semantic Modeling',
   level: 90
 }, {
   name: 'Data Modeling',
   level: 88
 }, {
-  name: 'SQL',
+  name: 'SQL / T-SQL',
   level: 85
+}, {
+  name: 'AWS Cloud Data Analytics',
+  level: 80
 }, {
   name: 'IBM Maximo',
   level: 85
 }, {
-  name: 'Python',
-  level: 65
-}, {
-  name: 'Cloud Fundamentals',
-  level: 60
+  name: 'Python & PySpark',
+  level: 75
 }];
 const languages = [{
   name: 'Arabic',
@@ -116,9 +116,8 @@ const About = () => {
           duration: 0.6,
           delay: 0.2
         }}>
-            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">Business Analytics Developer with 2+ years of hands-on experience in business intelligence and IBM Maximo Functional solutions. My expertise includes asset management, preventive maintenance, inventory, and work order management. I design impactful Power BI dashboards and analytics solutions that enhance operational performance. Skilled across the full analytics lifecycle, from data modeling and ETL to building clear, insight-driven visualizations that support strategic decision-making.
+            <p className="text-muted-foreground mb-8 text-lg leading-relaxed">BI Developer with 3 years of experience in data analysis, dashboard development, and data integration. Certified in Power BI (PL-300), Microsoft Fabric Analytics Engineer Associate (DP-600), Microsoft Fabric Data Engineer Associate (DP-700), and trained in AWS Certified Data Analytics (Specialty) through the Honhaar Jawan government program, with foundational knowledge of cloud-based analytics and data services. Strong expertise in analyzing large datasets, identifying trends, and supporting data driven decision-making. Extracted, cleaned, and transformed data from multiple sources for analysis and reporting. Experienced in building reports and dashboards to monitor business performance, with a growing interest in revenue optimization, forecasting, and strategic analytics. Familiar with cloud environments and continuously enhancing expertise in modern data engineering and AI-driven tools. Experienced in IBM Maximo Functional, focusing on asset management, work orders, Inventory management, Preventive maintenance, and system configuration. Working knowledge of BIRT Reporting for enterprise-level report generation. In addition to BI Completed Azure Fundamentals Certification for better understanding of solution deployment on cloud based environment using Azure services, cloud security and associated tools and technologies.</p>
 
-          </p>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
@@ -137,7 +136,7 @@ const About = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-1">Experience</h4>
-                  <p className="text-muted-foreground">2+ Years in Business Analytics</p>
+                  <p className="text-muted-foreground">3 Years in Business Analytics</p>
                 </div>
               </div>
             </div>
