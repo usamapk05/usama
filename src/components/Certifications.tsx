@@ -10,6 +10,26 @@ const certifications = [{
   link: 'https://learn.microsoft.com/api/credentials/share/en-us/UsamaMehmood-7205/8A69B3A82F71326A?sharingId',
   featured: true
 }, {
+  id: 9,
+  title: 'Microsoft Fabric Analytics Engineer Associate',
+  issuer: 'Microsoft',
+  code: 'DP-600',
+  link: 'https://learn.microsoft.com/en-us/users/usamamehmood-7205/credentials/aede91c06370fb12',
+  featured: true
+}, {
+  id: 10,
+  title: 'Microsoft Fabric Data Engineer Associate',
+  issuer: 'Microsoft',
+  code: 'DP-700',
+  link: 'https://learn.microsoft.com/en-us/users/usamamehmood-7205/credentials/1d6d428d4392d7b0',
+  featured: true
+}, {
+  id: 11,
+  title: 'AWS Certified Data Analytics (Specialty)',
+  issuer: 'Honhaar Jawan Program',
+  link: '/Official-Certificate-HONHAAR-FD3884B2D6.pdf',
+  featured: false
+}, {
   id: 2,
   title: 'Maximo Application Suite Sales Foundation',
   issuer: 'IBM',

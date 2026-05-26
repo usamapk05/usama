@@ -18,13 +18,13 @@ const services = [
   },
   {
     icon: Database,
-    title: 'Data Analytics Solutions',
-    description: 'End-to-end analytics solutions including data collection, processing, and advanced statistical analysis.',
+    title: 'Cloud & Enterprise Analytics',
+    description: 'End-to-end cloud analytics architectures utilizing AWS and Microsoft Fabric ecosystems. Building scalable modern data solutions from collection to advanced insights.',
   },
   {
     icon: RefreshCw,
-    title: 'Data Integration & ETL',
-    description: 'Seamless data integration from multiple sources with robust ETL pipelines for reliable data flow.',
+    title: 'Cloud Data Pipelines & ETL',
+    description: 'Designing seamless data integration pipelines using Microsoft Fabric and AWS Glue. Constructing robust Medallion architectures (Lakehouse/Warehouse) for reliable data flow.',
   },
   {
     icon: Palette,
@@ -38,8 +38,8 @@ const services = [
   },
   {
     icon: FileSpreadsheet,
-    title: 'Reporting & Visualization',
-    description: 'Comprehensive reporting solutions with clear data visualization for informed decision-making.',
+    title: 'Enterprise Semantic Modeling',
+    description: 'Developing complex enterprise semantic models and certified Power BI reports integrated with Microsoft Fabric for a single, optimized source of truth.',
   },
 ];
 
