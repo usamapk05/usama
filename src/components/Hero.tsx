@@ -3,7 +3,7 @@ import { ArrowDown, Linkedin, Mail, Award, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import profileImage from '@/assets/profile.jpeg';
-const roles = ['Power BI Certified Consultant', 'Business Analytics Developer', 'IBM Maximo Functional Associate'];
+const roles = ['Power BI Certified Consultant', 'Business Intelligence Developer', 'IBM Maximo Functional Associate'];
 const Hero = () => {
   const typedText = useTypingEffect(roles, 100, 50, 2000);
   return <section id="home" className="min-h-screen flex items-center justify-center gradient-bg relative overflow-hidden pt-20">
@@ -82,7 +82,7 @@ const Hero = () => {
                   <span className="text-muted-foreground">Microsoft Certified: Fabric Data Engineer Associate (DP-700)</span>
                 </div>
               </div>
-              <p className="text-muted-foreground mb-8 text-lg">Delivering data-driven insights by building scalable Power BI dashboards and analytics solutions, with 2+ years of experience across business intelligence and IBM Maximo Functional implementations.</p>
+              <p className="text-muted-foreground mb-8 text-lg">Delivering data-driven insights by building scalable Power BI dashboards and analytics solutions, with 3 years of experience across business intelligence and IBM Maximo Functional implementations.</p>
             </motion.div>
 
             <motion.div initial={{
