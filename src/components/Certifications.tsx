@@ -127,7 +127,7 @@ const Certifications = () => {
 
   // Separate featured cert for prominent display
   const featuredCert = certifications.find(c => c.featured);
-  const otherCerts = certifications.filter(c => !c.featured);
+  const otherCerts = certifications.filter(c => c.id !== featuredCert?.id);
   return <section id="certifications" className="py-20 md:py-32 gradient-bg">
       <div className="container mx-auto px-4">
         <motion.div ref={ref} initial={{
