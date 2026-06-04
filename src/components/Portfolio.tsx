@@ -14,8 +14,63 @@ import {
 import salesAnalyticsImg from '@/assets/sales-analytics-dashboard.png';
 import creditCardImg from '@/assets/credit-card-analysis.png';
 import salesPerformanceImg from '@/assets/sales-performance-dashboard.png';
+import faizanMartImg from '@/assets/faizan-mart-dashboard.png';
 
 const projects = [
+  {
+    id: 4,
+    title: 'Faizan Mart — Business Intelligence Dashboard',
+    category: 'Power BI',
+    icon: BarChart3,
+    image: faizanMartImg,
+    description: "A full-scale Power BI dashboard built on live retail data extracted from a remote SQL Server, covering sales performance, purchasing, inventory, void analysis, and cash flow for a real grocery mart — from raw data cleaning all the way to actionable business insights.",
+    technologies: ['Power BI', 'DAX', 'SQL Server', 'Data Modeling', 'Data Cleaning', 'ETL', 'Business Intelligence'],
+    details: `**Business Objective**
+
+Faizan Mart is a real retail grocery mart managing thousands of products across hundreds of categories. The owner needed a clear, data-driven way to monitor business performance — sales trends, purchasing costs, inventory health, and cash flow — all in one place. The goal was to build a professional Power BI dashboard that could turn raw transactional data into actionable business decisions.
+
+**Data Source & Technical Challenges**
+
+The data was stored on a SQL Server (on-premises), not accessible online. To collect the data, I had to establish a remote connection to the SQL Server, which came with multiple technical hurdles — network configuration, authentication issues, and driver compatibility. I debugged and resolved each issue independently, which deepened my practical understanding of SQL Server connectivity and database access in real-world environments.
+
+**Data Cleaning & Discovery**
+
+This was the most demanding phase of the project. The raw data came directly from the mart's billing and inventory system, and it was far from clean. I spent significant time:
+• Identifying and fixing inconsistencies in product names, categories, and pricing records
+• Handling null values, duplicate entries, and mismatched transaction records
+• Discovering system-level issues within the mart's own software — data that was being recorded incorrectly at the source
+• Flagging these issues to the mart owner with proper documentation and suggested solutions
+
+To validate my findings, I regularly cross-checked my cleaned data against the live SQL Server database to make sure nothing was lost or altered incorrectly. I also spent time with the mart team directly to understand how their system works, how transactions are recorded, and what the data actually means — which proved essential for accurate modeling.
+
+**Data Modeling**
+
+After cleaning, I built a structured data model in Power BI connecting sales, purchase, stock, void, and payment tables. Relationships were carefully defined to ensure accurate cross-filtering across all report pages. DAX measures were written for KPIs including Total Sales, Gross Profit, Gross Margin %, YOY Growth, Sales MTD, Return Rate, and Rolling 3-Month Sales.
+
+**Dashboard Pages & Key Features**
+
+The final report contains 6 pages covering the complete business picture:
+• Home — Branded landing page with navigation to all sections.
+• Business Overview — High-level KPIs: Rs111.9M total sales, Rs14.1M gross profit, 12.56% gross margin, 18.25% YOY growth. Monthly sales vs. gross profit trend, sales by category breakdown, top 10 categories, and year-over-year comparison (2024–2026).
+• Sales Analysis — Deep-dive into revenue performance with YOY growth trend line, product-level performance table showing sales amount, quantity, profit and margin, and full category summary with rolling 3-month sales.
+• Products & Purchasing — Rs97.9M total purchases tracked across 109 suppliers. Margin vs. volume scatter analysis by category, monthly sales vs. purchase comparison, and top suppliers by purchase value.
+• Stock & Void — Inventory health monitoring with 21,373 current stock units, 2,706 low-stock alerts, and a negative stock detection table that exposed products being sold without proper stock records — a direct finding from the data cleaning process. Void transaction tracking showing Rs135,223 in voided sales with monthly trend analysis.
+• Finance & Cash Flow — Rs111.8M cash received, Rs73,527 outstanding balance, payment status split (Paid vs. Overpaid), monthly cash vs. sales trend, and top invoices by value.
+
+**Key Insights Delivered**
+• Beverages and Cooking Oil are the top revenue-driving categories, together contributing over Rs20M in sales
+• Gross margin sits at 12.56%, with specific products like JF Red Chilli Powder achieving 45.87% margin
+• Negative stock records were found for several high-selling products (e.g., Eggs with -1,362 units), revealing a gap in the mart's stock-in recording process — this was highlighted and communicated to management
+• Over 53% of invoices had overpayment entries, pointing to a cash handling pattern that needed review
+• 18.25% year-over-year sales growth confirmed the business is expanding, giving the owner a clear benchmark going forward
+
+**Project Scope**
+
+Period Covered: January 2024 – June 2026
+Products: 7,456 | Categories: 165 | Suppliers: 109
+Prepared by: Usama Mehmood`,
+    link: 'https://app.powerbi.com/links/mKWesjDdUD?ctid=583e888b-008f-4a12-929b-edc94ed1fb8d&pbi_source=linkShare',
+  },
   {
     id: 1,
     title: 'Sales Analytics Report (Interactive Dashboard)',
