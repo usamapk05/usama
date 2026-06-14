@@ -15,7 +15,8 @@ import salesAnalyticsImg from '@/assets/sales-analytics-dashboard.png';
 import creditCardImg from '@/assets/credit-card-analysis.png';
 import salesPerformanceImg from '@/assets/sales-performance-dashboard.png';
 import faizanMartImg from '@/assets/faizan-mart-dashboard.png';
-import studentPerformanceImg from '@/assets/student-performance-dashboard.png.asset.json';
+import studentPerformanceAsset from '@/assets/student-performance-dashboard.png.asset.json';
+const studentPerformanceImg = studentPerformanceAsset.url;
 
 const projects = [
   {
