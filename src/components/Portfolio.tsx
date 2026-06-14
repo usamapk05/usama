@@ -18,6 +18,81 @@ import faizanMartImg from '@/assets/faizan-mart-dashboard.png';
 
 const projects = [
   {
+    id: 5,
+    title: 'Student Performance Intelligence Dashboard',
+    category: 'Power BI',
+    icon: BarChart3,
+    image: undefined,
+    description: 'A 5-page Power BI dashboard analyzing 1,044 students across two secondary schools, combining risk scoring, grade forecasting, and socioeconomic impact analysis to surface actionable insights for educational institutions.',
+    technologies: ['Power BI', 'DAX', 'Power Query', 'Data Modeling', 'ETS Forecasting', 'Linear Regression', 'Statistical Analysis', 'UCI Dataset', 'Education Analytics'],
+    details: `**Project Overview**
+
+I built this project to move past surface-level dashboards and demonstrate what education sector analytics actually looks like when done with real institutional intent. I chose the UCI Student Performance dataset (Cortez & Silva, 2008) deliberately because it's academically credible, publicly citable, and rich enough in socioeconomic and behavioral variables to support multi-dimensional analysis.
+
+The dataset covers 1,044 students across two Portuguese secondary schools, tracking academic performance across three grading periods alongside 30 demographic, behavioral, and social variables.
+
+**What I Built**
+
+The final dashboard runs across five dedicated pages, each serving a specific analytical purpose:
+
+• Executive Summary — Total enrollment (1,044 students), average final grade (11.34/20), pass rate (78.0% against an 85% target), distinction rate (6.7%), and at-risk count (250 students). Grade band distribution and school-gender performance breakdown matrix.
+
+• Academic Performance — Grade trajectory across all three periods (G1 → G2 → G3) with a progression forecast showing a 95% confidence band. Study time impact analysis, G1 vs G3 correlation scatter, and grade momentum indicator.
+
+• Risk & Intervention — A composite risk scoring system flagging students as High Risk (immediate counseling + mandatory classes + parent communication), Medium Risk (faculty mentor + weekly progress check), or Low Risk (monitoring + encouragement programs). At-Risk Student Registry drill-through table and alcohol impact delta (+1.02 grade points between Low and Moderate Risk groups).
+
+• Socio-Academic Analysis — Parental education level vs. student grade (2.33 point gap between highest and lowest education households), internet access advantage (+1.02 grade points), school and family support cross-analysis, higher education aspiration rate (91.48%), gender-disaggregated alcohol risk impact, and urban-rural grade gap (1.02 points).
+
+• Forecast & Statistical Analysis — Exponential Smoothing (ETS) for grade progression with 95% confidence band. Linear regression equation: G3 = 1.05 × G1 + (−0.41), with R² = 0.655 and Pearson correlation r = 0.809. Full statistical summary matrix by school and gender, plus cumulative grade distribution S-curve.
+
+**Data Engineering & Power Query Transformation**
+
+The raw data arrived as two separate CSV files — Math course (395 students) and Portuguese (649 students). Both files were cleaned and harmonized in Power Query Editor.
+
+I profiled both queries using Column Quality, Column Distribution, and Column Profile views to catch nulls, outliers, and encoding inconsistencies. Calculated columns added directly in the query layer included a Subject tag, Student_ID index, and readable labels for studytime, traveltime, Medu, and Fedu.
+
+A critical issue was a column naming discrepancy: the Math file used "paid" for extra paid classes, while the Portuguese file used "fatherd" for the same field. I caught this during a column audit, renamed "fatherd" to "paid" before appending, and documented the step. Additional transformation columns included Alcohol_Risk_Level (Low / Moderate / High), Has_Internet (Yes/No), and Study_Intensity bands. The two cleaned queries were appended into a single Student-Combined table (1,044 rows) and source tables were disabled from loading to keep the model clean.
+
+**Data Modeling**
+
+A three-table star-schema model was built: the combined Student table (1,044 rows), a Grade Bands reference table, and an Education reference table. All relationships were managed explicitly.
+
+**DAX Measures**
+
+44 custom measures organized into four display folders — Core KPIs, Trend & Progression, Statistical Analysis, and Socio-Academic. ISBLANK guards were built into ratio and comparison measures, with hidden helper measures keeping the field list clean.
+
+**Statistical Techniques**
+
+Linear regression (manual DAX implementation), Pearson correlation, Exponential Smoothing forecasting, standard deviation tracking, cumulative distribution modeling, and confidence interval bands.
+
+**UX & Navigation**
+
+Custom navigation buttons across all five pages, drill-through configuration from summary to the At-Risk Student Registry, custom tooltips, and an interactive intervention checklist embedded in the Risk page.
+
+**Key Analytical Findings**
+
+• Pass rate is 7 percentage points below the 85% institutional target — the single most actionable headline number
+
+• 250 students (24% of enrollment) meet the at-risk threshold — requiring a tiered intervention framework
+
+• First period grade explains 65.5% of final grade variance (R² = 0.655) — early identification is both possible and impactful
+
+• Students from higher-educated families outperform peers by over 2 grade points — pointing to structural support deficits
+
+• Internet access at home correlates with a +1.02 grade point advantage — a simple infrastructure gap with measurable consequences
+
+• Students studying more than 5 hours weekly average 12.49 vs. 10.58 for those below 2 hours — a nearly 2-point gap supporting targeted study habit interventions
+
+**Challenges**
+
+The column name discrepancy between the two source files was the most technically dangerous issue — silent data corruption is far worse than an error message. Several DAX measures had to be rebuilt after disabling source tables from load, sharpening my understanding of how Power BI resolves table references at query time versus model load time. Building the risk scoring system also required thinking beyond standard BI patterns — it's a composite calculation designed and validated against logical edge cases.
+
+**Why This Project**
+
+I built this specifically to demonstrate education sector BI capability to institutions. Academic performance data is one of the most policy-sensitive categories an analyst can work with — visualizations need to be clear enough for a department head to act on, defensible enough for an academic committee to question, and rigorous enough to hold up against a statistician's review.`,
+    link: 'https://app.powerbi.com/links/eZjtaIkWDv?ctid=583e888b-008f-4a12-929b-edc94ed1fb8d&pbi_source=linkShare',
+  },
+  {
     id: 4,
     title: 'Faizan Mart — Business Intelligence Dashboard',
     category: 'Power BI',
