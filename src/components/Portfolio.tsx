@@ -23,7 +23,7 @@ const projects = [
     title: 'Student Performance Intelligence Dashboard',
     category: 'Power BI',
     icon: BarChart3,
-    image: undefined,
+    image: studentPerformanceImg,
     description: 'A 5-page Power BI dashboard analyzing 1,044 students across two secondary schools, combining risk scoring, grade forecasting, and socioeconomic impact analysis to surface actionable insights for educational institutions.',
     technologies: ['Power BI', 'DAX', 'Power Query', 'Data Modeling', 'ETS Forecasting', 'Linear Regression', 'Statistical Analysis', 'UCI Dataset', 'Education Analytics'],
     details: `**Project Overview**
