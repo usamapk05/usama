@@ -3,6 +3,7 @@ import { ArrowDown, Linkedin, Mail, Award, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import profileImage from '@/assets/profile.jpeg';
+import resumeAsset from '@/assets/Usama-resume.pdf.asset.json';
 const roles = ['Power BI Certified Consultant', 'Business Intelligence Developer', 'IBM Maximo Functional Associate'];
 const Hero = () => {
   const typedText = useTypingEffect(roles, 100, 50, 2000);
@@ -102,7 +103,7 @@ const Hero = () => {
                 <a href="#contact">Contact Me</a>
               </Button>
               <Button asChild variant="outline" size="lg" className="border-accent text-accent hover:bg-accent/10">
-                <a href="/Usama-resume.pdf" download="Usama resume.pdf">
+                <a href={resumeAsset.url} download="Usama resume.pdf">
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </a>
